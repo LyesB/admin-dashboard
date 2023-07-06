@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Rubik:wght@900&display=swap');
 
 * {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -17,27 +18,142 @@
 .header{
     background: #fff;
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+}
+
+.header .search-bar-section {
+   
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-content: center;
+    margin-left: 30px;
+    
+}
+
+.header .search-bar-section .left-section{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header .search-bar-section .right-section ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.left-section .material-symbols-outlined{
+    align-self: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header .buttons-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header .information{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.header .information .info {
+    place-self: start;
+    align-self: center;
+}
+
+.header .information #avatar {
+    place-self: end;
+    align-self: center;
+    padding-right: 17px;
+    padding-left: 10px;
+}
+
+.info div {
+    font-size: 14px;
+}
+
+.info a {
+    font-size: 20px;
+}
+
+.header .information .avatar{
+    width: 60px;
+    height: 60px;
+}
+
+.buttons-section .buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+#new{
+    justify-self: end;
+}
+
+#upload{
+    justify-self: center;
+}
+
+#share{
+    justify-self: start;
+}
+
+.buttons button {
+    height: 2rem;
+    width: 5rem;
+    border-radius: 15px;
+    border: none;
+    background: #2e94b9;
+    color: #fff;
+    cursor: pointer;
+}
+
+.buttons button:hover{
+    filter: brightness(120%);
+}
+
+.search-bar{
+    width: 35rem;
+    height: 1.7rem;
+    border-radius: 10px;
+    border: none;
+    background: #dfebed;
+    padding-left: 10px;
+}
+
+.avatar{
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .side-bar{
     background: #2e94b9;
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 1fr 3fr 4fr ;
+    grid-template-rows: 1.5fr 4fr 5fr ;
     color: #fff;
     font-size: large;
     font-weight: 500;
-    font-family: 'Roboto', sans-serif;
 }
 
 .logo{
+    margin-top: 10px;
     margin-left: 30px;
     font-size: 28px;
     font-weight: 600;
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: center;
-    justify-content: space-between;
 }
 
 .logo .material-symbols-outlined {
@@ -48,11 +164,17 @@
     margin-left: 30px;
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 4fr ;
     align-items: center;
+    border: hidden;
+    
 }
 
-a {
+.side-bar ul li:hover{
+    filter: brightness(80%);
+}
+
+.side-bar a {
     text-decoration: none;
     color: #fff;
 }
